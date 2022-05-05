@@ -1,26 +1,33 @@
 // pages/newsRead/index.js
 import {getNewsContentByNewsId} from "../../api/news"
+import {getBodyData} from "../../utils/BodyData"
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        id:'',
-        newsConentList:[],
+        title: '',
+        body: {
+          author: '',
+          bio: '',
+          avatar: '',
+          nodes: []
+        },
+        image: '',
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        let that = this
-        that.setData({
-          id:options.id,
-        })
-        getNewsContentByNewsId(this.data.id).then(res=>{
+        getNewsContentByNewsId(options.id).then(res=>{
+            const data = res.data
+            this.setData(getBodyData(res.data.body));
             this.setData({
-                newsConentList: res.data
+              title: data.title,
+              htmlNode: res.data.body,
+              image: data.image,
             });
         });
         wx.setNavigationBarTitle({

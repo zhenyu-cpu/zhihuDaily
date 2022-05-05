@@ -5,7 +5,7 @@
     height: 100vh;
 }
 .layout__header{
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(85, 143, 219);
     position: fixed;
     left: 0;
     right: 0;
@@ -14,7 +14,7 @@
 }
 .layout__header-wrapper{
     height: 46px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(26, 159, 221);
     box-sizing: border-box;
 }
 .layout__footer{
