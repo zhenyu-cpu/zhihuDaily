@@ -1,0 +1,31 @@
+/* components/layout/index.wxss */
+.layout__{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.layout__header{
+    background-color: rgb(243, 243, 243);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+.layout__header-wrapper{
+    height: 46px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+.layout__footer{
+    background-color: darkslateblue;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* env是一个css函数，可以通过这个函数来获取iPhone X等刘海屏手机的安全区域来适配
+    参考链接🔗：https://developer.mozilla.org/zh-CN/docs/Web/CSS/env()
+    */
+    padding-bottom: env(safe-area-inset-bottom);
+    z-index: 10;
+}

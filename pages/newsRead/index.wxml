@@ -1,0 +1,5 @@
+<!--pages/newsRead/index.wxml-->
+<view class="container">
+	<rich-text nodes="{{newsConentList.body}}" space="nbsp"></rich-text>
+</view>
+

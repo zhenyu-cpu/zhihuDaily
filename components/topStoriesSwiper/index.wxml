@@ -1,0 +1,24 @@
+<!--components/imageSwiper/index.wxml-->
+<!--这是一个普通的轮播-->
+<view class="container">
+    <swiper class="swiper-box" bind:change="swiperChange" interval="4000" circular autoplay>
+        <block wx:for="{{swiperList}}" wx:key="id">
+            <swiper-item>
+            <view style="position:relative" bindtap="onTabNode" data-id="{{item.id}}">
+                <image class="targetImg" src="{{item.image}}" mode="aspectFill"></image>
+                <text class="newsTitle">{{item.title}}</text></view>
+                <text class="newsAuthor">{{item.hint}}</text>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!--重置小圆点的样式  -->
+    <view class="dots">
+        <view class="dotsBox" style='width:{{(swiperList.length*26+swiperList.length*10) + "rpx"}}'>
+        <!-- <view class="dotsBox" style='width:180rpx'> -->
+            <block wx:for="{{swiperList}}" wx:key="id">
+                <text class="dot {{index == currentIndex ? 'dot-active' : ''}}"></text>
+            </block>
+        </view>
+    </view>
+</view>
+

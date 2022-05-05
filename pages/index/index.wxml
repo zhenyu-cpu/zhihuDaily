@@ -1,4 +1,10 @@
 <!--index.wxml-->
-<view class="container">
-  Weixin
-</view>
+<layout>
+    <view class="main" slot="main" style="background-color: rgb(255, 255, 255); height: 1000px">
+    <topStoriesSwiper swiperList="{{topStoriesList}}"/>
+    <storiesCard wx:for="{{storiesList}}" wx:key="id" item="{{item}}"></storiesCard>
+    </view>
+    <view class="footer" slot="footer">
+        引脚部分
+    </view>。
+</layout>

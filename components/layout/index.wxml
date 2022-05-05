@@ -1,0 +1,19 @@
+<!--components/layout/index.wxml-->
+<view class="layout__">
+  <!-- header -->
+  <view class="layout__header" style="padding-top: {{statusBarHeight}}px">
+    <view class="layout__header-wrapper">
+      <slot name="header"></slot>
+    </view>
+  </view>
+  
+  <!-- main -->
+  <view class="layout__main" style="padding-top: {{statusBarHeight + 46}}px">
+    <slot name="main"></slot>
+  </view>
+  
+  <!-- footer -->
+  <view class="layout__footer">
+    <slot name="footer"></slot>
+  </view>
+</view>
