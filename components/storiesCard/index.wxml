@@ -1,6 +1,6 @@
 <!--components/storiesCard/index.wxml-->
 <view class="card" data-id="{{item.id}}" bindtap="onTabNode">
     <h2 class="card-title">{{item.title}}</h2>
-<text class="card_hint">{{item.hint}}</text>
-<image class="card_image" src="{{item.images[0]}}" mode="aspectFill"></image>
+    <text class="card_hint">{{item.hint}}</text>
+    <image class="card_image" src="{{item.images[0]}}" mode="aspectFill"></image>
 </view>
