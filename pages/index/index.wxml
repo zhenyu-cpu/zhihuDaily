@@ -5,5 +5,5 @@
     <storiesCard wx:for="{{storiesList}}" wx:key="id" item="{{item}}"></storiesCard>
     </view>
     <view class="footer" slot="footer">
-    </view>。
+    </view>
 </layout>
